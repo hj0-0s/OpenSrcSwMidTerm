@@ -5,11 +5,13 @@ import java.io.FileNotFoundException;
 import org.json.simple.*;
 import org.json.simple.parser.*;
 import java.util.*;
+import midterm.problem2.*;
 
 public class MidTerm {
 	public static void main(String[] args) {
 		JSONParser jsonP = new JSONParser();
 		Scanner scan = new Scanner(System.in);
+		RegularExpression re = new RegularExpression();
 		try {
 			FileReader file = new FileReader("c:/midterm.json");
 			JSONObject jsonObj = (JSONObject)jsonP.parse(file);
@@ -22,7 +24,7 @@ public class MidTerm {
 			System.out.print("Enter the pattern you are looking for:");
 			String oper = scan.nextLine();
 			for(int i = 0;i<14;i++) {
-				if(arr2[i].contains(oper))
+				if(re.check(arr2[i], oper))
 					System.out.println("item "+i+": "+arr2[i]);
 			}
 		}catch(FileNotFoundException e) {

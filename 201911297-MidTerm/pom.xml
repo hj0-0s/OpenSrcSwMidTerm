@@ -19,6 +19,13 @@
   </properties>
 
   <dependencies>
+   <dependency>
+   <groupId>midterm</groupId>
+   <artifactId>problem2</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
+   <scope>system</scope> 
+   <systemPath>C:/Users/황재상/프로그래밍/JAVA/MidTermJar/problem2-0.0.1-SNAPSHOT.jar</systemPath>
+ </dependency>
 	<dependency>
       <groupId>com.googlecode.json-simple</groupId>
       <artifactId>json-simple</artifactId>
